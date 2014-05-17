@@ -1,0 +1,216 @@
+comment_char %
+escape_char /
+% Charset: UTF-8
+
+LC_IDENTIFICATION
+title        "UniversalFormat/English"
+source       "Outer Science project UniversalFormat"
+address      "(currently not established)"
+contact      ""
+email        "(currently not established) contact Stanley Hawkeye"
+tel          ""
+fax          ""
+language     "English"
+territory    "Worldwide"
+revision     "0.1 testing"
+date         "2014-05-10"
+audience     "English users on Earth"
+application  "English texts"
+abbreviation "en_UF"
+%
+category  "en_UF:2000";LC_IDENTIFICATION
+category  "en_UF:2000";LC_CTYPE
+category  "en_UF:2000";LC_COLLATE
+category  "en_UF:2000";LC_TIME
+category  "en_UF:2000";LC_NUMERIC
+category  "en_UF:2000";LC_PAPER
+category  "en_UF:2000";LC_MEASUREMENT
+category  "en_UF:2000";LC_MESSAGES
+category  "en_UF:2000";LC_NAME
+category  "en_UF:2000";LC_ADDRESS
+category  "en_UF:2000";LC_MONETARY
+category  "en_UF:2000";LC_TELEPHONE
+END LC_IDENTIFICATION
+
+LC_CTYPE
+copy "i18n"
+
+translit_start
+include "translit_combining";""
+translit_end
+END LC_CTYPE
+
+LC_COLLATE
+copy "iso14651_t1"
+END LC_COLLATE
+
+LC_TIME
+% January, February, March, April, May, June, July, August, September, October, November, December
+mon           "<J><a><n><u><a><r><y>";/
+    "<F><e><b><r><u><a><r><y>";/
+    "<M><a><r><c><h>";/
+    "<A><p><r><i><l>";/
+    "<M><a><y>";/
+    "<J><u><n><e>";/
+    "<J><u><l><y>";/
+    "<A><u><g><u><s><t>";/
+    "<S><e><p><t><e><m><b><e><r>";/
+    "<O><c><t><o><b><e><r>";/
+    "<N><o><v><e><m><b><e><r>";/
+    "<D><e><c><e><m><b><e><r>"
+
+% Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
+abmon         "<J><a><n>";/
+    "<F><e><b>";/
+    "<M><a><r>";/
+    "<A><p><r>";/
+    "<M><a><y>";/
+    "<J><u><n>";/
+    "<J><u><l>";/
+    "<A><u><g>";/
+    "<S><e><p>";/
+    "<O><c><t>";/
+    "<N><o><v>";/
+    "<D><e><c>"
+
+% Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+day           "<S><u><n><d><a><y>";/
+    "<M><o><n><d><a><y>";/
+    "<T><u><e><s><d><a><y>";/
+    "<W><e><d><n><e><s><d><a><y>";/
+    "<T><h><u><r><s><d><a><y>";/
+    "<F><r><i><d><a><y>";/
+    "<S><a><t><u><r><d><a><y>"
+
+% Sun, Mon, Tue, Wed, Thu, Fri, Sat
+abday         "<S><u><n>";/
+    "<M><o><n>";/
+    "<T><u><e>";/
+    "<W><e><d>";/
+    "<T><h><u>";/
+    "<F><r><i>";/
+    "<S><a><t>"
+
+
+week          7;19971130;4
+% Sunday is the first week day
+first_weekday 1
+first_workday 2
+% datetime format %Y-%m-%dT%T %Z
+d_t_fmt       "<%><Y><-><%><m><-><%><d><T><%><T>< ><%><Z>"
+% date format %Y-%m-%d
+d_fmt         "<%><Y><-><%><m><-><%><d>"
+% time format %H:%M:%S %Z
+t_fmt         "<%><H><:><%><M><:><%><S>< ><%><Z>"
+
+% 12-hour time format is not supported
+am_pm         "";""
+t_fmt_ampm    ""
+
+% long date format %A, %e %B, %Y
+date_fmt      "<%><A><,>< ><%><B>< ><%><e><,>< ><%><Y>"
+END LC_TIME
+
+LC_NUMERIC
+% .
+decimal_point "<.>"
+% ] [
+thousands_sep "< >"
+% 3;3
+grouping      3;3
+END LC_NUMERIC
+
+LC_MONETARY
+% LC_MONETARY definition derived from POSIX and en_UF LC_NUMERIC
+%
+int_curr_symbol      ""
+currency_symbol      ""
+% .
+mon_decimal_point "<.>"
+% ] [
+mon_thousands_sep "< >"
+% 3;3
+mon_grouping         3;3
+positive_sign        ""
+negative_sign        "<->"
+int_frac_digits      -1
+frac_digits          -1
+p_cs_precedes        1
+n_cs_precedes        1
+p_sep_by_space       0
+n_sep_by_space       0
+p_sign_posn          1
+n_sign_posn          1
+int_p_cs_precedes    1
+int_n_cs_precedes    1
+int_p_sep_by_space   0
+int_n_sep_by_space   0
+int_p_sign_posn      1
+int_n_sign_posn      1
+END LC_MONETARY
+
+LC_PAPER
+% A4 paper
+height 297
+width  210
+END LC_PAPER
+
+LC_MEASUREMENT
+% metric measurement system
+measurement 1
+END LC_MEASUREMENT
+
+LC_MESSAGES
+% ^[1yY].*
+yesexpr      "<^><[><1><y><Y><]><.><*>"
+% ^[0nN].*
+noexpr       "<^><[><0><n><N><]><.><*>"
+% Yes
+yesstr       "<Y><e><s>"
+% No
+nostr        "<N><o>"
+END LC_MESSAGES
+
+LC_NAME
+% %d%t%g%t%m%t%f
+name_fmt     "<%><d><%><t><%><g><%><t><%><m><%><t><%><f>"
+
+% Miss
+name_miss    "<M><i><s><s>"
+% Mr
+name_mr      "<M><r>"
+% Mrs
+name_mrs     "<M><r><s>"
+% Ms
+name_ms      "<M><s>"
+% there isn't a general honorific in English
+name_gen     ""
+END LC_NAME
+
+LC_ADDRESS
+% %f%N%a%N%d%N%b%N%s %h %e %r%N%z %T%N%c%N
+postal_fmt   "<%><f><%><N><%><a><%><N><%><d><%><N><%><b><%><N><%><s>< ><%><h>< ><%><e>< ><%><r><%><N><%><z>< ><%><T><%><N><%><c><%><N>"
+
+country_name ""
+country_post ""
+country_car  ""
+country_isbn ""
+country_num  0
+country_ab2  ""
+country_ab3  ""
+
+% English
+lang_name    "<E><n><g><l><i><s><h>"
+% en
+lang_ab      "<e><n>"
+% eng
+lang_term    "<e><n><g>"
+% eng
+lang_lib     "<e><n><g>"
+END LC_ADDRESS
+
+LC_TELEPHONE
+tel_int_fmt  "<+><%><c>< ><%><a>< ><%><l>"
+int_select   ""
+int_prefix   ""
+END LC_TELEPHONE
